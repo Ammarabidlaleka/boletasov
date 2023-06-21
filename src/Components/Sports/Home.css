@@ -1,0 +1,38 @@
+.card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 5px;
+    background-color: #3E39D1;
+  }
+  .caraousalHeadings {
+    display: inline-block;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+  }
+  .slick-dots{
+    bottom: -45px !important;
+  }
+  .slick-dots li button:before {
+    font-size: 12px !important;
+    color:#3E39D1 !important;
+    }
+  
+  .slick-dots li button:active {
+      color:#3E39D1 !important;
+  }
+  
