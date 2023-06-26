@@ -31,7 +31,16 @@ const Footer = () => {
     "Site map",
     "$Usd",
   ];
-  const socialMedia = [Fb, Tweeter, Insta];
+  const socialMedia = [{
+    icon:Fb,
+    link:"#"
+  },{
+    icon:Tweeter,
+    link:"#"
+  },{
+    icon:Insta,
+    link:"#"
+  }];
   return (
     <>
       <Container maxWidth="xxl" sx={{ background: "black", color: "white" }}>
@@ -99,7 +108,7 @@ const Footer = () => {
                     {socialMedia.map((sm) => {
                       return (
                         <>
-                          <img src={sm} />
+                          <a href={sm.link}><img src={sm.icon} /></a>
                         </>
                       );
                     })}

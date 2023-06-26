@@ -240,7 +240,7 @@ const Navbar = () => {
                       </a>
                     </li></Link>
                     <li class="dropdown-divider"></li>
-                      <li>
+                    <Link to="/baseballhome" style={{textDecoration:"none"}}><li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -251,7 +251,7 @@ const Navbar = () => {
                         >
                           Basketball
                         </a>
-                      </li>
+                      </li></Link>
                       <li class="dropdown-divider"></li>
                       <Link to="/baseballhome" style={{textDecoration:"none"}}> <li>
                         <a
@@ -266,7 +266,7 @@ const Navbar = () => {
                         </a>
                       </li></Link>
                       <li class="dropdown-divider"></li>
-                      <li>
+                      <Link to="/baseballhome" style={{textDecoration:"none"}}><li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -277,9 +277,9 @@ const Navbar = () => {
                         >
                           Boxing
                         </a>
-                      </li>
+                      </li></Link>
                       <li class="dropdown-divider"></li>
-                      <li>
+                      <Link to="/baseballhome" style={{textDecoration:"none"}}><li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -290,7 +290,7 @@ const Navbar = () => {
                         >
                           WWE
                         </a>
-                      </li>
+                      </li></Link>
                     </ul>
                   </div>
                   <div
@@ -340,7 +340,7 @@ const Navbar = () => {
                         </a>
                       </li></Link>
                       <li class="dropdown-divider"></li>
-                      <li>
+                      <Link to="/comedyhome" style={{textDecoration:"none"}}><li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -351,9 +351,9 @@ const Navbar = () => {
                         >
                           Festivals
                         </a>
-                      </li>
+                      </li></Link>
                       <li class="dropdown-divider"></li>
-                      <li>
+                      <Link to="/comedyhome" style={{textDecoration:"none"}}><li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -364,9 +364,9 @@ const Navbar = () => {
                         >
                           Theatre
                         </a>
-                      </li>
+                      </li></Link>
                       <li class="dropdown-divider"></li>
-                      <li>
+                      <Link to="/comedyhome" style={{textDecoration:"none"}}><li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -377,9 +377,9 @@ const Navbar = () => {
                         >
                           Other events
                         </a>
-                      </li>
+                      </li></Link>
                       <li class="dropdown-divider"></li>
-                      <li>
+                      <Link to="/comedyhome" style={{textDecoration:"none"}}><li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -390,7 +390,7 @@ const Navbar = () => {
                         >
                           Museums
                         </a>
-                      </li>
+                      </li></Link>
                     </ul>
                   </div>
                 </Grid>

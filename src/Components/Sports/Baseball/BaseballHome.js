@@ -262,16 +262,13 @@ const BaseballHome = () => {
             <Stack direction="row" spacing={6}>
               <Stack
                 direction="row"
-                spacing={1}
+                spacing={0}
                 sx={{ display: "flex", alignItems: "center" }}
               >
                 <img src={share} style={{ width: "24px", height: "24px" }} />
-                <Typography
-                  variant={isMatchmd ? "body2" : "body1"}
-                  color="#fff"
-                >
+                <Button variant="text" size="medium" sx={{color:"#fff",textTransform:"capitalize"}}>
                   Share
-                </Typography>
+                </Button>
               </Stack>
               <Stack
                 direction="row"
@@ -282,12 +279,9 @@ const BaseballHome = () => {
                   src={seatingchart}
                   style={{ width: "24px", height: "24px" }}
                 />
-                <Typography
-                  color="#fff"
-                  variant={isMatchmd ? "body2" : "body1"}
-                >
+                <Button variant="text" size="medium" sx={{color:"#fff",textTransform:"capitalize"}}>
                   Seating Chart
-                </Typography>
+                </Button>
               </Stack>
             </Stack>
             <br />
