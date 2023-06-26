@@ -148,7 +148,7 @@ const Navbar = () => {
                       Music
                     </button>
                     <ul
-                      style={{ background: "#393939" }}
+                      style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
                       class="dropdown-menu"
                       aria-labelledby="dropdownMenuButton"
                       id="myDropdown"
@@ -222,7 +222,7 @@ const Navbar = () => {
                       Sports
                     </button>
                     <ul
-                      style={{ background: "#393939" }}
+                      style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
                       class="dropdown-menu"
                       aria-labelledby="dropdownMenuButton"
                       id="myDropdown1"
@@ -309,7 +309,7 @@ const Navbar = () => {
                       More
                     </button>
                     <ul
-                      style={{ background: "#393939" }}
+                      style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
                       class="dropdown-menu"
                       aria-labelledby="dropdownMenuButton"
                       id="myDropdown2"
@@ -446,15 +446,44 @@ const Navbar = () => {
                       class="dropdown-menu"
                       aria-labelledby="dropdownMenuButton"
                       id="myDropdown3"
+                      style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
                     >
                       <li>
-                        <a>option1</a>
+                        <a
+                          class="dropdown-item"
+                          style={{
+                            color: "white",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          Pkr
+                        </a>
                       </li>
+                      <li class="dropdown-divider"></li>
                       <li>
-                        <a>option1</a>
+                        <a
+                          class="dropdown-item"
+                          style={{
+                            color: "white",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          Dollar
+                        </a>
                       </li>
-                      <li>
-                        <a>option1</a>
+                      <li class="dropdown-divider"></li> <li>
+                        <a
+                          class="dropdown-item"
+                          style={{
+                            color: "white",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          Dirham
+                        </a>
                       </li>
                     </ul>
                   </div>
