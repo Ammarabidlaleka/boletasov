@@ -36,3 +36,6 @@
 .slick-dots li button:active {
     color:#3E39D1 !important;
 }
+.arrows{
+  position:relative;
+}

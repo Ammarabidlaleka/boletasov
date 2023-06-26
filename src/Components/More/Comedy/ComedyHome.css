@@ -30,3 +30,6 @@
     overflow: hidden !important;
     text-overflow: ellipsis;
   }
+  .arrows{
+    position:relative;
+  }

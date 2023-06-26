@@ -488,12 +488,14 @@ const Home = () => {
               </div>
                   <a
                     onClick={previous}
+                    className="arrows"
                     style={{ textTransform: "none", cursor: "pointer" }}
                   >
                     <img src={Left} />
                   </a>
                   <a
                     onClick={next}
+                    className="arrows"
                     style={{ textTransform: "none", cursor: "pointer" }}
                   >
                     <img src={Right} />
@@ -579,12 +581,14 @@ const Home = () => {
                 <a
                   onClick={previous1}
                   style={{ textTransform: "none", cursor: "pointer" }}
+                  className="arrows"
                 >
                   <img src={Left} />
                 </a>
                 <a
                   onClick={next1}
                   style={{ textTransform: "none", cursor: "pointer" }}
+                  className="arrows"
                 >
                   <img src={Right} />
                 </a>
@@ -645,12 +649,14 @@ const Home = () => {
                 <a
                   onClick={previous2}
                   style={{ textTransform: "none", cursor: "pointer" }}
+                  className="arrows"
                 >
                   <img src={Left} />
                 </a>
                 <a
                   onClick={next2}
                   style={{ textTransform: "none", cursor: "pointer" }}
+                  className="arrows"
                 >
                   <img src={Right} />
                 </a>
@@ -721,12 +727,14 @@ const Home = () => {
                 <a
                   onClick={previous3}
                   style={{ textTransform: "none", cursor: "pointer" }}
+                  className="arrows"
                 >
                   <img src={Left} />
                 </a>
                 <a
                   onClick={next3}
                   style={{ textTransform: "none", cursor: "pointer" }}
+                  className="arrows"
                 >
                   <img src={Right} />
                 </a>
@@ -798,12 +806,14 @@ const Home = () => {
                 <a
                   onClick={previous4}
                   style={{ textTransform: "none", cursor: "pointer" }}
+                  className="arrows"
                 >
                   <img src={Left} />
                 </a>
                 <a
                   onClick={next4}
                   style={{ textTransform: "none", cursor: "pointer" }}
+                  className="arrows"
                 >
                   <img src={Right} />
                 </a>

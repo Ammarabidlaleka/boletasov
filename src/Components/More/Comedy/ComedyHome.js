@@ -538,12 +538,14 @@ const ComedyHome = () => {
                   <a
                     onClick={previous}
                     style={{ textTransform: "none", cursor: "pointer" }}
+                    className="arrows"
                   >
                     <img src={Left} />
                   </a>
                   <a
                     onClick={next}
                     style={{ textTransform: "none", cursor: "pointer" }}
+                    className="arrows"
                   >
                     <img src={Right} />
                   </a>
@@ -614,12 +616,14 @@ const ComedyHome = () => {
                 <a
                   onClick={previous2}
                   style={{ textTransform: "none", cursor: "pointer" }}
+                  className="arrows"
                 >
                   <img src={Left} />
                 </a>
                 <a
                   onClick={next2}
                   style={{ textTransform: "none", cursor: "pointer" }}
+                  className="arrows"
                 >
                   <img src={Right} />
                 </a>
