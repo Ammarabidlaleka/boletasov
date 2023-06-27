@@ -233,7 +233,7 @@ const BaseballHome = () => {
                 sx={{ color: "#fff" }}
               >
                 <b>
-                  <span className="underline">Baseb</span>all
+                  <span className="underline1">Baseb</span>all
                 </b>
               </Typography>
               <Typography variant={isMatchmd ? "body2" : "body1"} color="#fff">
@@ -300,7 +300,7 @@ const BaseballHome = () => {
               sx={{ color: "#000" }}
             >
               
-                <span className="underline1">Even</span>ts
+                <span className="underline">Even</span>ts
               
             </Typography>
             <hr></hr>
@@ -413,7 +413,7 @@ const BaseballHome = () => {
               sx={{ color: "#000" }}
             >
               
-                <span className="underline1">All G</span>ames
+                <span className="underline">All G</span>ames
               
             </Typography>
             <br />

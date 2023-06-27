@@ -431,7 +431,7 @@ const ComedyHome = () => {
                 sx={{ color: "#fff" }}
               >
                 <b>
-                  <span className="underline">Comedy T</span>ickets
+                  <span className="underline1">Comedy T</span>ickets
                 </b>
               </Typography>
             </Stack>
@@ -564,7 +564,7 @@ const ComedyHome = () => {
             sx={{ color: "#464646" }}
           >
             
-              <span className="underline1">Popular</span> Comedy Shows
+              <span className="underline">Popular</span> Comedy Shows
             
           </Typography>
           <br />
@@ -642,7 +642,7 @@ const ComedyHome = () => {
               sx={{ color: "#000" }}
             >
               
-                <span className="underline1">All sh</span>ows
+                <span className="underline">All sh</span>ows
               
             </Typography>
             <hr></hr>

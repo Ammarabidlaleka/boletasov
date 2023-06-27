@@ -14,8 +14,9 @@
   bottom: -2px;
   width: 100%;
   height: 5px;
-  background-color: #3E39D1;
+  background-color: #3E39D1 !important;
 }
+
 .caraousalHeadings {
   display: inline-block;
   width: 200px;

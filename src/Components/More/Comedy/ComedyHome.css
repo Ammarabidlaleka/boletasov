@@ -21,7 +21,7 @@
     bottom: -2px;
     width: 100%;
     height: 5px;
-    background-color: #fff;
+    background-color: #3E39D1 !important;
   }
   .underline1 {
     position: relative;
@@ -35,7 +35,7 @@
     bottom: -2px;
     width: 100%;
     height: 5px;
-    background-color: #3E39D1;
+    background-color: #fff !important;
   }
   .caraousalHeadings {
     display: inline-block;
