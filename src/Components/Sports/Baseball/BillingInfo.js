@@ -60,7 +60,7 @@ const BillingInfo = () => {
               <b>Billing information</b>
             </Typography>
             <Typography color="#3E39D1" variant={isMatchsm ? "body2" : "h6"}>
-              <b>BOLETASO checkout is always secure and encrypted.</b>
+              BOLETASO checkout is always secure and encrypted.
             </Typography>
             <br />
             <Typography textAlign="end">
@@ -76,24 +76,24 @@ const BillingInfo = () => {
               <b>Pay With Card</b>
             </Typography>
             <br />
-            <label>Credit card number</label>
+            <b><label>Credit card number</label></b>
             <br />
             <TextField size="small" fullWidth />
             <br />
             <br />
             <Grid container spacing={2}>
               <Grid item xs={4}>
-                <label>Exp. month</label>
+              <b><label>Exp. month</label></b>
                 <TextField size="small" variant="outlined" select fullWidth />
                 {/* Replace this with your dropdown component */}
               </Grid>
               <Grid item xs={4}>
-                <label>Exp. month</label>
+              <b><label>Exp. month</label></b>
                 <TextField size="small" variant="outlined" fullWidth select />
                 {/* Replace this with your dropdown component */}
               </Grid>
               <Grid item xs={4}>
-                <label>Exp. month</label>
+              <b> <label>Exp. month</label></b>
                 <TextField size="small" variant="outlined" fullWidth />
               </Grid>
             </Grid>
@@ -104,37 +104,37 @@ const BillingInfo = () => {
             <br />
             <Grid container spacing={2}>
               <Grid item xs={6}>
-                <label>First Name</label>
+              <b><label>First Name</label></b>
                 <TextField size="small" variant="outlined" fullWidth />
               </Grid>
               <Grid item xs={6}>
-                <label>Last Name</label>
+              <b><label>Last Name</label></b>
                 <TextField size="small" variant="outlined" fullWidth />
               </Grid>
             </Grid>
             <br />
-            <label>Country</label>
+            <b><label>Country</label></b>
             <br />
             <TextField size="small" fullWidth select />
             <br />
             <br />
-            <label>Address</label>
+            <b><label>Address</label></b>
             <br />
             <TextField size="small" fullWidth />
             <br />
             <br />
             <Grid container spacing={2}>
               <Grid item xs={6}>
-                <label>City</label>
+              <b><label>City</label></b>
                 <TextField size="small" variant="outlined" fullWidth />
               </Grid>
               <Grid item xs={3}>
-                <label>State</label>
+              <b><label>State</label></b>
                 <TextField size="small" variant="outlined" fullWidth select />
                 {/* Replace this with your dropdown component */}
               </Grid>
               <Grid item xs={3}>
-                <label>Zip Code</label>
+              <b><label>Zip Code</label></b>
                 <TextField size="small" variant="outlined" fullWidth />
               </Grid>
             </Grid>
@@ -169,9 +169,9 @@ const BillingInfo = () => {
             <Typography variant="h6">
               <b>Thousand Below with Until I Wake</b>
             </Typography>
-            <Typography color="#464646">Thu Jul 13 at 7:00pm</Typography>
+            <Typography color="#464646"><b>Thu Jul 13 at 7:00pm</b></Typography>
             <Typography color="#464646">
-              The Deluxe at Old National Centre, Indianapolis, IN
+            <b>The Deluxe at Old National Centre, Indianapolis, IN</b>
             </Typography>
             <Stack direction="row" justifyContent="space-between">
               <TextField
@@ -181,7 +181,7 @@ const BillingInfo = () => {
                 select
               />
               <Typography color="#9C9C9C" variant="h5">
-                <span style={{ color: "#3E39D1" }}>$60</span>x1
+              <b><span style={{ color: "#3E39D1" }}>$60</span>x1</b>
               </Typography>
             </Stack>
           </Stack>
@@ -189,7 +189,7 @@ const BillingInfo = () => {
           <br />
           <Stack direction="row" spacing={1}>
             <MailOutlineIcon sx={{ color: "#3E39D1" }} />
-            <Typography color="#3E39D1">johnadam123@gamil.com</Typography>
+            <Typography color="#3E39D1"><b>johnadam123@gamil.com</b></Typography>
           </Stack>
         </Grid>
       </Grid>

@@ -446,9 +446,9 @@ const Home = () => {
             variant={isMatchmd ? "body1" : "h5"}
             color="white"
           >
-            <strong>
+          
             Tickets of your favorite sport.<br /> All right here. Let's go.
-            </strong>
+          
           </Typography>
         </Container>
       </Container>
@@ -490,11 +490,11 @@ const Home = () => {
                                   {card.name}
                                 </span>
                               </Typography>
-                              <Typography variant="body2" color="#DFDFDF">
+                              <Typography variant="body2" color="#ffffff">
                                 {card.date}
                               </Typography>
                               <br />
-                              <Typography variant="body2" color="#DFDFDF">
+                              <Typography variant="body2" color="#ffffff">
                                 {card.location}
                               </Typography>
                             </CardContent>
@@ -541,12 +541,12 @@ const Home = () => {
               variant={isMatchmd ? "body1" : "h6"}
               sx={{ color: "#464646" }}
             >
-              <b>
+              
                 <span className="underline">Browse</span> Events
-              </b>
+              
             </Typography>
             <Typography variant={isMatchmd ? "h6" : "h4"}>
-              <b>America Fort, UT</b>
+              America Fort, UT
             </Typography>
             <Stack direction="row" spacing={2}>
             <TextField size="small" sx={{width:"179px",border:"0.982199px solid #464646",borderRadius:"5px"}} label="Change Location" select/>
@@ -565,9 +565,9 @@ const Home = () => {
             variant={isMatchmd ? "body1" : "h6"}
             sx={{ color: "#464646" }}
           >
-            <b>
+            
               <span className="underline">Cato</span>gories
-            </b>
+            
           </Typography>
           <br />
           <div class="container-fluid">
@@ -634,9 +634,9 @@ const Home = () => {
             variant={isMatchmd ? "body1" : "h6"}
             sx={{ color: "#464646" }}
           >
-            <b>
+            
               <span className="underline">Basketb</span>all
-            </b>
+            
           </Typography>
           <br />
           <div class="container-fluid">
@@ -664,14 +664,14 @@ const Home = () => {
                                 component="div"
                               >
                                 <span className="caraousalHeadings">
-                                  {card.name}
+                                  <b>{card.name}</b>
                                 </span>
                               </Typography>
                               <Typography variant="body2" color="#ffffff">
                                 {card.price}
                               </Typography>
                             </Stack>
-                            <Typography variant="body2" color="#979497">
+                            <Typography variant="body2" color="#ffffff">
                               {card.date}
                             </Typography>
                             <br />
@@ -712,9 +712,9 @@ const Home = () => {
             variant={isMatchmd ? "body1" : "h6"}
             sx={{ color: "#464646" }}
           >
-            <b>
+            
               <span className="underline">Base</span>ball
-            </b>
+            
           </Typography>
           <br />
           <div class="container-fluid">
@@ -742,14 +742,14 @@ const Home = () => {
                                 component="div"
                               >
                                 <span className="caraousalHeadings">
-                                  {card.name}
+                                  <b>{card.name}</b>
                                 </span>
                               </Typography>
                               <Typography variant="body2" color="#ffffff">
                                 {card.price}
                               </Typography>
                             </Stack>
-                            <Typography variant="body2" color="#979497">
+                            <Typography variant="body2" color="#ffffff">
                               {card.date}
                             </Typography>
                             <br />
@@ -790,9 +790,9 @@ const Home = () => {
             variant={isMatchmd ? "body1" : "h6"}
             sx={{ color: "#464646" }}
           >
-            <b>
+            
               <span className="underline">Bo</span>xing
-            </b>
+            
           </Typography>
           <br />
           <div class="container-fluid">
@@ -820,14 +820,14 @@ const Home = () => {
                                 component="div"
                               >
                                 <span className="caraousalHeadings">
-                                  {card.name}
+                                  <b>{card.name}</b>
                                 </span>
                               </Typography>
                               <Typography variant="body2" color="#ffffff">
                                 {card.price}
                               </Typography>
                             </Stack>
-                            <Typography variant="body2" color="#979497">
+                            <Typography variant="body2" color="#ffffff">
                               {card.date}
                             </Typography>
                             <br />

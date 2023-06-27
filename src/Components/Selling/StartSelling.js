@@ -92,7 +92,7 @@ const StartSelling = () => {
             </b>
           </Typography>
           <br />
-          <Typography variant={isMatchmd ? "body2" : "h6"} color="white">
+          <Typography variant={isMatchmd ? "body2" : "h6"} font-family='Montserrat' color="white">
             Upload tickets, set a price and get paid. Our transparent
             <br />
             pricing means more money in your pocket.
@@ -150,7 +150,7 @@ const StartSelling = () => {
                   sx={cards}
                 >
                   <CardContent>
-                    <Typography>
+                    <Typography fontFamily= 'Poppins'>
                       <strong>{a.name}</strong>
                     </Typography>
                     <br />

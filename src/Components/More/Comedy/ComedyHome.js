@@ -370,6 +370,7 @@ const ComedyHome = () => {
     px: 4,
     py: 2,
     borderRadius: "10px",
+    fontFamily: 'Poppins'
   };
   const grid2 = {
     backgroundImage: `url(${pic2})`,
@@ -433,17 +434,15 @@ const ComedyHome = () => {
                   <span className="underline">Comedy T</span>ickets
                 </b>
               </Typography>
-              <Typography variant={isMatchmd ? "body2" : "body1"} color="#fff">
-                Tickets
-              </Typography>
             </Stack>
+            <br />
             <br />
             <br />
             <Typography variant={isMatchmd ? "h6" : "h5"} color="#fff">
               <b>About:</b>
             </Typography>
             <br />
-            <Typography color="#fff" variant={isMatchmd ? "body2" : "body1"}>
+            <Typography color="#ffffff" variant={isMatchmd ? "body2" : "body1"} fontFamily="Poppins">
             Popular music, better known as “pop,” traces its roots back to the 1950s in both the United States and the United Kingdom. Most pop songs are known for repetitive, catchy lyrics that are easy to both sing and dance along too.
             </Typography>
             <br />
@@ -515,11 +514,11 @@ const ComedyHome = () => {
                                   {card.name}
                                 </span>
                               </Typography>
-                              <Typography variant="body2" color="#DFDFDF">
+                              <Typography variant="body2" color="#ffffff">
                                 {card.date}
                               </Typography>
                               <br />
-                              <Typography variant="body2" color="#DFDFDF">
+                              <Typography variant="body2" color="#ffffff">
                                 {card.location}
                               </Typography>
                             </CardContent>
@@ -564,9 +563,9 @@ const ComedyHome = () => {
             variant={isMatchmd ? "body1" : "h6"}
             sx={{ color: "#464646" }}
           >
-            <b>
-              <span className="underline">Popular</span> Comedy Shows
-            </b>
+            
+              <span className="underline1">Popular</span> Comedy Shows
+            
           </Typography>
           <br />
           <div class="container-fluid">
@@ -594,14 +593,14 @@ const ComedyHome = () => {
                                 component="div"
                               >
                                 <span className="caraousalHeadings">
-                                  {card.name}
+                                 <b> {card.name}</b>
                                 </span>
                               </Typography>
                               <Typography variant="body2" color="#ffffff">
                                 {card.price}
                               </Typography>
                             </Stack>
-                            <Typography variant="body2" color="#979497">
+                            <Typography variant="body2" color="#ffffff">
                               {card.date}
                             </Typography>
                             <br />
@@ -642,9 +641,9 @@ const ComedyHome = () => {
               variant={isMatchmd ? "h6" : "h5"}
               sx={{ color: "#000" }}
             >
-              <b>
-                <span className="underline">Even</span>ts
-              </b>
+              
+                <span className="underline1">All sh</span>ows
+              
             </Typography>
             <hr></hr>
             <Stack direction="row" spacing={2}>
@@ -712,6 +711,7 @@ const ComedyHome = () => {
                               <Typography
                                 variant={isMatchmd ? "subtitle2" : "body1"}
                                 color="#8b8b8b"
+                                fontFamily='Poppins'
                               >
                                 {ticket.date}
                               </Typography>
@@ -722,6 +722,7 @@ const ComedyHome = () => {
                             sx={{
                               background: "#02004D",
                               px: isMatchsm ? null : 3,
+                              fontFamily: 'Poppins'
                             }}
                             
                           >
@@ -754,9 +755,9 @@ const ComedyHome = () => {
               variant={isMatchmd ? "h6" : "h5"}
               sx={{ color: "#000" }}
             >
-              <b>
+              
                 <span className="underline">Top A</span>rtists
-              </b>
+              
             </Typography>
             <br />
             <Stack direction="column" spacing={2}>

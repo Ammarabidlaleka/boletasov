@@ -59,6 +59,7 @@ const Footer = () => {
                   <Typography
                     variant="subtitle1"
                     textAlign={isMatchsm ? "justify" : null}
+                    fontFamily='Poppins'
                   >
                     Lorem ipsum dolor sit amet consectetur. Faucibus cursus
                     mauris volutpat blandit integer turpis quis. Consequat
@@ -86,7 +87,7 @@ const Footer = () => {
                 {pages.map((page) => {
                   return (
                     <>
-                      <Button variant="text" sx={{ color: "#fff" }}>
+                      <Button variant="text" sx={{ color: "#fff" ,fontFamily:'Poppins'}}>
                         {page}
                       </Button>
                       <br></br>

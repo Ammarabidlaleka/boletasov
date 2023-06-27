@@ -141,6 +141,7 @@ const Navbar = () => {
                       background: "transparent",
                       border: "none",
                       color: "black",
+                      fontFamily: 'Poppins'
                     }}
                     class="btn btn-primary dropdown-toggle"
                     type="button"
@@ -148,7 +149,7 @@ const Navbar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Music
+                    <b>Music</b>
                   </button>
                   <ul
                     style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
@@ -219,6 +220,7 @@ const Navbar = () => {
                       background: "transparent",
                       border: "none",
                       color: "black",
+                      fontFamily: 'Poppins'
                     }}
                     class="btn btn-primary dropdown-toggle"
                     type="button"
@@ -226,7 +228,7 @@ const Navbar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Sports
+                   <b> Sports</b>
                   </button>
                   <ul
                     style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
@@ -310,6 +312,7 @@ const Navbar = () => {
                       background: "transparent",
                       border: "none",
                       color: "black",
+                      fontFamily: 'Poppins'
                     }}
                     class="btn btn-primary dropdown-toggle"
                     type="button"
@@ -317,7 +320,7 @@ const Navbar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    More
+                    <b>More</b>
                   </button>
                   <ul
                     style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
@@ -420,7 +423,8 @@ const Navbar = () => {
                     <Button
                       variant="text"
                       size="small"
-                      sx={{ color: "#000", textTransform: "capitalize" }}
+                      sx={{ color: "#000", textTransform: "capitalize",fontFamily: 'Poppins' }}
+
                     >
                       <b>Start Selling</b>
                     </Button>

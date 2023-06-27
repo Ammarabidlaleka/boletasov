@@ -172,6 +172,7 @@ const BaseballHome = () => {
     px: 4,
     py: 2,
     borderRadius: "10px",
+    fontFamily: 'Poppins'
   };
   const grid2 = {
     backgroundImage: `url(${pic2})`,
@@ -245,7 +246,7 @@ const BaseballHome = () => {
               <b>About:</b>
             </Typography>
             <br />
-            <Typography color="#fff" variant={isMatchmd ? "body2" : "body1"}>
+            <Typography color="#fff" variant={isMatchmd ? "body2" : "body1"} fontFamily="Poppins">
               The Major League Baseball All-Star Game is an annual sporting
               event that’s also known as the “Midsummer Classic.” A tradition
               that started in 1933, the MLB All-Star Game always takes place
@@ -298,9 +299,9 @@ const BaseballHome = () => {
               variant={isMatchmd ? "h6" : "h5"}
               sx={{ color: "#000" }}
             >
-              <b>
-                <span className="underline">Even</span>ts
-              </b>
+              
+                <span className="underline1">Even</span>ts
+              
             </Typography>
             <hr></hr>
             <Stack direction="row" spacing={2}>
@@ -312,7 +313,7 @@ const BaseballHome = () => {
                   textTransform: "capitalize",
                 }}
               >
-                <b>American Fort, UT</b>
+               American Fort, UT
               </Button>
               <Button
                 variant="contained"
@@ -369,7 +370,7 @@ const BaseballHome = () => {
                                 variant={isMatchmd ? "subtitle2" : "body1"}
                                 color="#8b8b8b"
                               >
-                                {ticket.date}
+                                <b>{ticket.date}</b>
                               </Typography>
                             </Stack>
                           </Stack>
@@ -378,6 +379,7 @@ const BaseballHome = () => {
                             sx={{
                               background: "#02004D",
                               px: isMatchsm ? null : 3,
+                              fontFamily:'Poppins'
                             }}
                             
                           >
@@ -410,9 +412,9 @@ const BaseballHome = () => {
               variant={isMatchmd ? "h6" : "h5"}
               sx={{ color: "#000" }}
             >
-              <b>
-                <span className="underline">All G</span>ames
-              </b>
+              
+                <span className="underline1">All G</span>ames
+              
             </Typography>
             <br />
             <Stack direction="column" spacing={1}>
@@ -431,7 +433,7 @@ const BaseballHome = () => {
                           sx={{ background: "#8886B7", color: "#fff", pl: 2 }}
                         >
                           <Stack direction="row" spacing={2}>
-                            <Typography sx={rectangle}>
+                            <Typography sx={rectangle} fontFamily= 'Poppins'>
                               <b>
                                 <Stack spacing={1}>
                                   <span>{game.month}</span>
@@ -450,7 +452,7 @@ const BaseballHome = () => {
                                 variant={isMatchsm ? "body1" : "h6"}
                                 className="caraousalHeadings"
                               >
-                                <b>{game.location}</b>
+                                {game.location}
                               </Typography>
                             </Stack>
                           </Stack>

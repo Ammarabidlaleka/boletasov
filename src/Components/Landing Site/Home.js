@@ -407,11 +407,11 @@ const Home = () => {
             variant={isMatchsm ? "body1" : "h5"}
             color="white"
           >
-            <strong>
+            
               Your next best-night-ever is waiting.
               <br />
               And we have the tickets.
-            </strong>
+            
           </Typography>
           <br />
           <Button
@@ -434,7 +434,7 @@ const Home = () => {
           <br />
           <Typography
             variant={isMatchsm ? "body1" : "h6"}
-            sx={{ color: "#fff" }}
+            sx={{ color: "#ffffff" }}
           >
             <b>
               <span className="underline">Tren</span>ding Events
@@ -466,11 +466,11 @@ const Home = () => {
                                   {card.name}
                                 </span>
                               </Typography>
-                              <Typography variant="body2" color="#DFDFDF">
+                              <Typography variant="body2"color="#ffffff">
                                 {card.date}
                               </Typography>
                               <br />
-                              <Typography variant="body2" color="#DFDFDF">
+                              <Typography variant="body2" color="#ffffff">
                                 {card.location}
                               </Typography>
                             </CardContent>
@@ -522,7 +522,7 @@ const Home = () => {
               </b>
             </Typography>
             <Typography variant={isMatchsm ? "h6" : "h4"}>
-              <b>America Fort, UT</b>
+              America Fort, UT
             </Typography>
             <Stack direction="row" spacing={2}>
              <TextField size="small" sx={{width:"179px",border:"0.982199px solid #464646",borderRadius:"5px"}} label="Change Location" select/>
@@ -541,9 +541,9 @@ const Home = () => {
             variant={isMatchsm ? "body1" : "h6"}
             sx={{ color: "#464646" }}
           >
-            <b>
+            
               <span className="underline">Cato</span>gories
-            </b>
+            
           </Typography>
           <br />
           <div class="container-fluid">
@@ -606,9 +606,9 @@ const Home = () => {
             variant={isMatchsm ? "body1" : "h6"}
             sx={{ color: "#464646" }}
           >
-            <b>
+            
               <span className="underline">Popular</span> MLB Teams
-            </b>
+            
           </Typography>
           <br />
           <div class="container-fluid">
@@ -675,9 +675,9 @@ const Home = () => {
             variant={isMatchsm ? "body1" : "h6"}
             sx={{ color: "#464646" }}
           >
-            <b>
+            
               <span className="underline">Concer</span>ts
-            </b>
+            
           </Typography>
           <br />
           <div class="container-fluid">
@@ -712,7 +712,7 @@ const Home = () => {
                                 {card.price}
                               </Typography>
                             </Stack>
-                            <Typography variant="body2" color="#979497">
+                            <Typography variant="body2" color="#ffffff">
                               {card.date}
                             </Typography>
                             <br />
@@ -753,9 +753,9 @@ const Home = () => {
             variant={isMatchsm ? "body1" : "h6"}
             sx={{ color: "#464646" }}
           >
-            <b>
+            
               <span className="underline">Comed</span>y
-            </b>
+            
           </Typography>
           <br />
           <div class="container-fluid">
@@ -790,7 +790,7 @@ const Home = () => {
                                 {card.price}
                               </Typography>
                             </Stack>
-                            <Typography variant="body2" color="#979497">
+                            <Typography variant="body2" color="#ffffff">
                               {card.date}
                             </Typography>
                             <br />

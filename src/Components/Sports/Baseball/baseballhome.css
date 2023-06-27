@@ -21,6 +21,20 @@
     bottom: -2px;
     width: 100%;
     height: 5px;
+    background-color:#ffffff;
+  }
+  .underline1 {
+    position: relative;
+    display: inline-block;
+  }
+
+  .underline1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 5px;
     background-color: #3E39D1;
   }
   .caraousalHeadings {

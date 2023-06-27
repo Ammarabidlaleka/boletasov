@@ -34,14 +34,15 @@ function App() {
         fontFamily: 'Poppins', // Font family for h4 headers
       },
       h5: {
-        fontFamily: 'Montserrat', // Font family for h5 headers
+        fontFamily: 'Poppins', // Font family for h5 headers
       },
       h6: {
-        fontFamily: 'Montserrat', // Font family for h6 headers
+        fontFamily: 'Poppins', // Font family for h6 headers
       },
     },
     Button: {
       textTransform:"capitalize",
+      fontFamily: 'Montserrat'
     }
   });
   return (

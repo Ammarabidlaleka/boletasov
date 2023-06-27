@@ -404,7 +404,7 @@ const Navbar = () => {
                     <Button
                       variant="text"
                       size="small"
-                      sx={{ color: "#fff", textTransform: "capitalize" }}
+                      sx={{ color: "#fff", textTransform: "capitalize",fontFamily: 'Poppins' }}
                     >
                       <b>Start Selling</b>
                     </Button>
@@ -417,7 +417,7 @@ const Navbar = () => {
                     <Button
                       variant="text"
                       size="small"
-                      sx={{ color: "#fff", textTransform: "capitalize" }}
+                      sx={{ color: "#fff", textTransform: "capitalize",fontFamily: 'Poppins' }}
                     >
                       <b>Login</b>
                     </Button>
