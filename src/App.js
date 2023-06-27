@@ -16,10 +16,29 @@ import BaseballHome from "./Components/Sports/Baseball/BaseballHome";
 import BillingInfo from "./Components/Sports/Baseball/BillingInfo";
 import HomeMore from "./Components/More/Home";
 import ComedyHome from "./Components/More/Comedy/ComedyHome";
+
 function App() {
   const theme = createTheme({
     typography: {
-      fontFamily: "Montserrat",
+      fontFamily: 'Montserrat', // Default font family for regular text
+      h1: {
+        fontFamily: 'Poppins', // Font family for h1 headers
+      },
+      h2: {
+        fontFamily: 'Poppins', // Font family for h2 headers
+      },
+      h3: {
+        fontFamily: 'Poppins', // Font family for h3 headers
+      },
+      h4: {
+        fontFamily: 'Poppins', // Font family for h4 headers
+      },
+      h5: {
+        fontFamily: 'Montserrat', // Font family for h5 headers
+      },
+      h6: {
+        fontFamily: 'Montserrat', // Font family for h6 headers
+      },
     },
     Button: {
       textTransform:"capitalize",
