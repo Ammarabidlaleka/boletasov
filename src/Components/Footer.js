@@ -47,7 +47,7 @@ const Footer = () => {
         <Container maxWidth="xl" sx={{ pt: "80px", pb: "20px" }}>
           <div className="margin">
             <Grid container spacing={2}>
-              <Grid item xs={12} lg={5} sx={{ mb: isMatchsm ? "40px" : null }}>
+              <Grid item xs={12} lg={5} md={5} sx={{ mb: isMatchsm ? "40px" : null }}>
                 <Stack spacing={2}>
                   <img
                     src={Logo}
@@ -68,11 +68,12 @@ const Footer = () => {
                   </Typography>
                 </Stack>
               </Grid>
-              <Grid item lg={1}></Grid>
+              <Grid item md={1} lg={1}></Grid>
               <Grid
                 item
                 xs={12}
                 lg={2}
+                md={2}
                 sx={{
                   textAlign: isMatchsm ? "center" : null,
                   mb: isMatchsm ? "40px" : null,
@@ -87,9 +88,7 @@ const Footer = () => {
                 {pages.map((page) => {
                   return (
                     <>
-                      <Button variant="text" sx={{ color: "#fff" ,fontFamily:'Poppins'}}>
-                        {page}
-                      </Button>
+                      <Typography fontFamily = 'Poppins'>{page}</Typography>
                       <br></br>
                     </>
                   );
@@ -99,6 +98,7 @@ const Footer = () => {
                 item
                 xs={12}
                 lg={4}
+                md={4}
                 sx={{ display: "flex", justifyContent: "center" }}
               >
                 <Stack spacing={2}>
