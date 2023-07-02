@@ -191,7 +191,7 @@ export default function PersistentDrawerLeft() {
           {page.map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemButton component={Link} href={text.link}>
+                <ListItemButton component={Link} onClick={()=>navigate(text.link)}>
                   {text.page}
                 </ListItemButton>
               </ListItemButton>
