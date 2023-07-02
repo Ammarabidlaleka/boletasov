@@ -23,6 +23,8 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useTheme, useMediaQuery, Divider } from "@mui/material";
 import DrawerComp from "./DrawerComp";
 import "./Navbar.css";
+import LoginModal from "./Authentication/LoginModal";
+import SignupModal from "./Authentication/SignupModal";
 const Navbar = () => {
   // CSS AND STATES
   const theme = useTheme();
@@ -60,6 +62,24 @@ const Navbar = () => {
     var dropdown = document.getElementById("myDropdown3");
     dropdown.classList.remove("show");
   }
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+  const [openModal1, setOpenModal1] = useState(false);
+
+  const handleOpenModal1 = () => {
+    setOpenModal1(true);
+  };
+
+  const handleCloseModal1 = () => {
+    setOpenModal1(false);
+  };
   return (
     <>
       <AppBar
@@ -119,114 +139,44 @@ const Navbar = () => {
                   </Stack>
                 </Grid>
               )}
-             
-                <Grid
-                  item
-                  lg={4}
-                  md={6}
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-evenly",
-                    alignItems: "center",
-                  }}
+
+              <Grid
+                item
+                lg={4}
+                md={6}
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignItems: "center",
+                }}
+              >
+                <div
+                  class="dropdown"
+                  onMouseLeave={closeDropdown}
+                  onMouseOver={openDropdown}
                 >
-                  <div
-                    class="dropdown"
-                    onMouseLeave={closeDropdown}
-                    onMouseOver={openDropdown}
+                  <button
+                    style={{ background: "transparent", border: "none" }}
+                    class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                   >
-                    <button
-                      style={{ background: "transparent", border: "none" }}
-                      class="btn btn-primary dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Music
-                    </button>
-                    <ul
-                      class="dropdown-menu "
-                      aria-labelledby="dropdownMenuButton"
-                      id="myDropdown"
-                      style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
-                    >
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          style={{
-                            color: "white",
-                            display: "flex",
-                            justifyContent: "center",
-                          }}
-                        >
-                          Reggaetón
-                        </a>
-                      </li>
-                      <li class="dropdown-divider"></li>
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          style={{
-                            color: "white",
-                            display: "flex",
-                            justifyContent: "center",
-                          }}
-                        >
-                          Rock
-                        </a>
-                      </li>
-                      <li class="dropdown-divider"></li>
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          style={{
-                            color: "white",
-                            display: "flex",
-                            justifyContent: "center",
-                          }}
-                        >
-                          Pop
-                        </a>
-                      </li>
-                      <li class="dropdown-divider"></li>
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          style={{
-                            color: "white",
-                            display: "flex",
-                            justifyContent: "center",
-                          }}
-                        >
-                          Salsa
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div
-                    class="dropdown"
-                    onMouseLeave={closeDropdown1}
-                    onMouseOver={openDropdown1}
+                    Music
+                  </button>
+                  <ul
+                    class="dropdown-menu "
+                    aria-labelledby="dropdownMenuButton"
+                    id="myDropdown"
+                    style={{
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      background: "#393939",
+                    }}
                   >
-                    <button
-                      style={{ background: "transparent", border: "none" }}
-                      class="btn btn-primary dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Sports
-                    </button>
-                    <ul
-                      style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                      id="myDropdown1"
-                    >
-                        <Link to="/homesport" style={{textDecoration:"none"}}> <li>
-                    <a
+                    <li>
+                      <a
                         class="dropdown-item"
                         style={{
                           color: "white",
@@ -234,11 +184,94 @@ const Navbar = () => {
                           justifyContent: "center",
                         }}
                       >
-                        Home
+                        Reggaetón
                       </a>
-                    </li></Link>
+                    </li>
                     <li class="dropdown-divider"></li>
-                    <Link to="/baseballhome" style={{textDecoration:"none"}}> <li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        style={{
+                          color: "white",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        Rock
+                      </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        style={{
+                          color: "white",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        Pop
+                      </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        style={{
+                          color: "white",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        Salsa
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="dropdown"
+                  onMouseLeave={closeDropdown1}
+                  onMouseOver={openDropdown1}
+                >
+                  <button
+                    style={{ background: "transparent", border: "none" }}
+                    class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Sports
+                  </button>
+                  <ul
+                    style={{
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      background: "#393939",
+                    }}
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                    id="myDropdown1"
+                  >
+                    <Link to="/homesport" style={{ textDecoration: "none" }}>
+                      {" "}
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          style={{
+                            color: "white",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          Home
+                        </a>
+                      </li>
+                    </Link>
+                    <li class="dropdown-divider"></li>
+                    <Link to="/baseballhome" style={{ textDecoration: "none" }}>
+                      {" "}
+                      <li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -249,9 +282,12 @@ const Navbar = () => {
                         >
                           Basketball
                         </a>
-                      </li></Link>
-                      <li class="dropdown-divider"></li>
-                      <Link to="/baseballhome" style={{textDecoration:"none"}}> <li>
+                      </li>
+                    </Link>
+                    <li class="dropdown-divider"></li>
+                    <Link to="/baseballhome" style={{ textDecoration: "none" }}>
+                      {" "}
+                      <li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -262,9 +298,12 @@ const Navbar = () => {
                         >
                           Baseball
                         </a>
-                      </li></Link>
-                      <li class="dropdown-divider"></li>
-                      <Link to="/baseballhome" style={{textDecoration:"none"}}> <li>
+                      </li>
+                    </Link>
+                    <li class="dropdown-divider"></li>
+                    <Link to="/baseballhome" style={{ textDecoration: "none" }}>
+                      {" "}
+                      <li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -275,9 +314,11 @@ const Navbar = () => {
                         >
                           Boxing
                         </a>
-                      </li></Link>
-                      <li class="dropdown-divider"></li>
-                      <Link to="/baseballhome" style={{textDecoration:"none"}}><li>
+                      </li>
+                    </Link>
+                    <li class="dropdown-divider"></li>
+                    <Link to="/baseballhome" style={{ textDecoration: "none" }}>
+                      <li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -288,43 +329,53 @@ const Navbar = () => {
                         >
                           WWE
                         </a>
-                      </li></Link>
-                    </ul>
-                  </div>
-                  <div
-                    class="dropdown"
-                    onMouseLeave={closeDropdown2}
-                    onMouseOver={openDropdown2}
+                      </li>
+                    </Link>
+                  </ul>
+                </div>
+                <div
+                  class="dropdown"
+                  onMouseLeave={closeDropdown2}
+                  onMouseOver={openDropdown2}
+                >
+                  <button
+                    style={{ background: "transparent", border: "none" }}
+                    class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                   >
-                    <button
-                      style={{ background: "transparent", border: "none" }}
-                      class="btn btn-primary dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      More
-                    </button>
-                    <ul
-                      style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                      id="myDropdown2"
-                    >
-                      <Link to="/homemore" style={{textDecoration:"none"}}> <li>
-                    <a
-                        class="dropdown-item"
-                        style={{
-                          color: "white",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        Home
-                      </a>
-                    </li></Link>
-                    <Link to="/comedyhome" style={{textDecoration:"none"}}> <li class="dropdown-divider"></li>
+                    More
+                  </button>
+                  <ul
+                    style={{
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      background: "#393939",
+                    }}
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                    id="myDropdown2"
+                  >
+                    <Link to="/homemore" style={{ textDecoration: "none" }}>
+                      {" "}
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          style={{
+                            color: "white",
+                            display: "flex",
+                            justifyContent: "center",
+                          }}
+                        >
+                          Home
+                        </a>
+                      </li>
+                    </Link>
+                    <Link to="/comedyhome" style={{ textDecoration: "none" }}>
+                      {" "}
+                      <li class="dropdown-divider"></li>
                       <li>
                         <a
                           class="dropdown-item"
@@ -336,9 +387,12 @@ const Navbar = () => {
                         >
                           Comedy
                         </a>
-                      </li></Link>
-                      <li class="dropdown-divider"></li>
-                      <Link to="/comedyhome" style={{textDecoration:"none"}}>  <li>
+                      </li>
+                    </Link>
+                    <li class="dropdown-divider"></li>
+                    <Link to="/comedyhome" style={{ textDecoration: "none" }}>
+                      {" "}
+                      <li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -349,9 +403,12 @@ const Navbar = () => {
                         >
                           Festivals
                         </a>
-                      </li></Link>
-                      <li class="dropdown-divider"></li>
-                      <Link to="/comedyhome" style={{textDecoration:"none"}}> <li>
+                      </li>
+                    </Link>
+                    <li class="dropdown-divider"></li>
+                    <Link to="/comedyhome" style={{ textDecoration: "none" }}>
+                      {" "}
+                      <li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -362,9 +419,12 @@ const Navbar = () => {
                         >
                           Theatre
                         </a>
-                      </li></Link>
-                      <li class="dropdown-divider"></li>
-                      <Link to="/comedyhome" style={{textDecoration:"none"}}> <li>
+                      </li>
+                    </Link>
+                    <li class="dropdown-divider"></li>
+                    <Link to="/comedyhome" style={{ textDecoration: "none" }}>
+                      {" "}
+                      <li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -375,9 +435,11 @@ const Navbar = () => {
                         >
                           Other events
                         </a>
-                      </li></Link>
-                      <li class="dropdown-divider"></li>
-                      <Link to="/comedyhome" style={{textDecoration:"none"}}><li>
+                      </li>
+                    </Link>
+                    <li class="dropdown-divider"></li>
+                    <Link to="/comedyhome" style={{ textDecoration: "none" }}>
+                      <li>
                         <a
                           class="dropdown-item"
                           style={{
@@ -388,11 +450,11 @@ const Navbar = () => {
                         >
                           Museums
                         </a>
-                      </li></Link>
-                    </ul>
-                  </div>
-                </Grid>
-              
+                      </li>
+                    </Link>
+                  </ul>
+                </div>
+              </Grid>
 
               <Grid lg={4} md={6}>
                 <Stack
@@ -404,7 +466,11 @@ const Navbar = () => {
                     <Button
                       variant="text"
                       size="small"
-                      sx={{ color: "#fff", textTransform: "capitalize",fontFamily: 'Poppins' }}
+                      sx={{
+                        color: "#fff",
+                        textTransform: "capitalize",
+                        fontFamily: "Poppins",
+                      }}
                     >
                       <b>Start Selling</b>
                     </Button>
@@ -413,18 +479,23 @@ const Navbar = () => {
                     className="vl"
                     style={{ borderLeft: "1px solid #979497", height: "34px" }}
                   ></div>
-                  <Link to="/login" style={{ textTransform: "none" }}>
-                    <Button
+
+                  <Button
+                    onClick={handleOpenModal}
+                    variant="text"
+                    size="small"
+                    sx={{
+                      color: "#fff",
+                      textTransform: "capitalize",
+                      fontFamily: "Poppins", 
+                    }}
+                  >
+                    <b>Login</b>
+                  </Button>
+                  <LoginModal open={openModal} handleClose={handleCloseModal} />
+                  <Button
                       variant="text"
-                      size="small"
-                      sx={{ color: "#fff", textTransform: "capitalize",fontFamily: 'Poppins' }}
-                    >
-                      <b>Login</b>
-                    </Button>
-                  </Link>
-                  <Link to="/signup" style={{ textTransform: "none" }}>
-                    <Button
-                      variant="text"
+                      onClick={handleOpenModal1}
                       sx={{
                         color: "#fff",
                         textTransform: "capitalize",
@@ -435,7 +506,7 @@ const Navbar = () => {
                     >
                       <b>Get Started</b>
                     </Button>
-                  </Link>
+                    <SignupModal open={openModal1} handleClose={handleCloseModal1} />
                   <div
                     class="dropdown"
                     onMouseLeave={closeDropdown3}
@@ -455,7 +526,11 @@ const Navbar = () => {
                       class="dropdown-menu"
                       aria-labelledby="dropdownMenuButton"
                       id="myDropdown3"
-                      style={{left: "50%", transform: "translateX(-50%)",background:"#393939"}}
+                      style={{
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                        background: "#393939",
+                      }}
                     >
                       <li>
                         <a
@@ -482,7 +557,8 @@ const Navbar = () => {
                           Dollar
                         </a>
                       </li>
-                      <li class="dropdown-divider"></li> <li>
+                      <li class="dropdown-divider"></li>{" "}
+                      <li>
                         <a
                           class="dropdown-item"
                           style={{

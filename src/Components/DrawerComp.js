@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -19,7 +19,18 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import Logo from "./images/LogoWhite.png";
-import { Button, useMediaQuery, Stack,Link } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import LoginModal from "./Authentication/LoginModal";
+import SignupModal from "./Authentication/SignupModal";
+import {
+  Button,
+  useMediaQuery,
+  Stack,
+  Link,
+  MenuItem,
+  Menu,
+  Container,
+} from "@mui/material";
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -76,17 +87,28 @@ const page = [
     page: "Start Selling",
     link: "/startselling",
   },
-  {
-    page: "signup",
-    link: "/signup",
-  },
-  {
-    page: "Login",
-    link: "/login",
-  },
 ];
 
 export default function PersistentDrawerLeft() {
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+  const [openModal1, setOpenModal1] = useState(false);
+
+  const handleOpenModal1 = () => {
+    setOpenModal1(true);
+  };
+
+  const handleCloseModal1 = () => {
+    setOpenModal1(false);
+  };
+  const navigate = useNavigate();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -96,6 +118,20 @@ export default function PersistentDrawerLeft() {
 
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleOpenMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseMenu = () => {
+    setAnchorEl(null);
+  };
+
+  const handleToggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
   };
   const isMatchsm = useMediaQuery(theme.breakpoints.down("sm"));
   const isMatchmd = useMediaQuery(theme.breakpoints.down("md"));
@@ -155,19 +191,360 @@ export default function PersistentDrawerLeft() {
           {page.map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemButton
-      component={Link}
-      href={text.link}
-    >
-      {text.page}
-    </ListItemButton>
+                <ListItemButton component={Link} href={text.link}>
+                  {text.page}
+                </ListItemButton>
               </ListItemButton>
             </ListItem>
           ))}
         </List>
+        <Container>
+          <div class="dropdown">
+            <button
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "#000000",
+              }}
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Music
+            </button>
+            <ul
+              class="dropdown-menu "
+              aria-labelledby="dropdownMenuButton"
+              id="myDropdown"
+              style={{
+                left: "50%",
+                transform: "translateX(-50%)",
+                background: "#393939",
+              }}
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  style={{
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  Reggaetón
+                </a>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  style={{
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  Rock
+                </a>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  style={{
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  Pop
+                </a>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  style={{
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  Salsa
+                </a>
+              </li>
+            </ul>
+          </div>
+          <br />
+          <div class="dropdown">
+            <button
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "#000000",
+              }}
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Sports
+            </button>
+            <ul
+              style={{
+                left: "50%",
+                transform: "translateX(-50%)",
+                background: "#393939",
+              }}
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton"
+              id="myDropdown1"
+            >
+              
+                {" "}
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick = {()=>navigate('/homesport')}
+                  >
+                    Home
+                  </a>
+                </li>
+              
+              <li class="dropdown-divider"></li>
+             
+                {" "}
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick = {()=>navigate('/baseballhome')}
+                  >
+                    Basketball
+                  </a>
+                </li>
+             
+              <li class="dropdown-divider"></li>
+             
+                {" "}
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick = {()=>navigate('/baseballhome')}
+                  >
+                    Baseball
+                  </a>
+                </li>
+             
+              <li class="dropdown-divider"></li>
+              
+                {" "}
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick = {()=>navigate('/baseballhome')}
+                  >
+                    Boxing
+                  </a>
+                </li>
+              
+              <li class="dropdown-divider"></li>
+             
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick = {()=>navigate('/baseballhome')}
+                  >
+                    WWE
+                  </a>
+                </li>
+             
+            </ul>
+          </div>
+          <br />
+          <div class="dropdown">
+            <button
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "#000000",
+              }}
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              More
+            </button>
+            <ul
+              style={{
+                left: "50%",
+                transform: "translateX(-50%)",
+                background: "#393939",
+              }}
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton"
+              id="myDropdown2"
+            >
+              
+                {" "}
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick={()=>navigate('/homemore')}
+                  >
+                    Home
+                  </a>
+                </li>
+              
+              
+                {" "}
+                <li class="dropdown-divider"></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick={()=>navigate('/comedyhome')}
+                  >
+                    Comedy
+                  </a>
+                </li>
+              
+              <li class="dropdown-divider"></li>
+              
+                {" "}
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick={()=>navigate('/comedyhome')}
+                  >
+                    Festivals
+                  </a>
+                </li>
+              
+              <li class="dropdown-divider"></li>
+             
+                {" "}
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick={()=>navigate('/comedyhome')}
+                  >
+                    Theatre
+                  </a>
+                </li>
+             
+              <li class="dropdown-divider"></li>
+              
+                {" "}
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick={()=>navigate('/comedyhome')}
+                  >
+                    Other events
+                  </a>
+                </li>
+              
+              <li class="dropdown-divider"></li>
+             
+                <li>
+                  <a
+                    class="dropdown-item"
+                    style={{
+                      color: "white",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                    onClick={()=>navigate('/comedyhome')}
+                  >
+                    Museums
+                  </a>
+                </li>
+             
+            </ul>
+          </div>
+        </Container><br />
+        <Container>
+          <Stack direction="row" spacing={0}>
+          <Button
+                    onClick={handleOpenModal}
+                    variant="text"
+                    size="small"
+                    sx={{
+                      color: "#000000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    <b>Login</b>
+                  </Button>
+                  <LoginModal open={openModal} handleClose={handleCloseModal} />
+                  <Button
+                      variant="text"
+                      size="small"
+                      onClick={handleOpenModal1}
+                      sx={{
+                        color: "#000000",
+                        textTransform: "capitalize",
+                      }}
+                    >
+                      <b>Get Started</b>
+                    </Button>
+                    <SignupModal open={openModal1} handleClose={handleCloseModal1} />
+          </Stack>
+        </Container>
       </Drawer>
     </Box>
   );

@@ -23,7 +23,7 @@ import Logo from "./images/LogoWhite.png";
 import { Link } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useTheme, useMediaQuery, Divider } from "@mui/material";
-import DrawerComp from "./DrawerComp";
+import DrawerCompBlack from "./DrawerCompBlack";
 import "./Navbar.css";
 const Navbar = () => {
   // CSS AND STATES
@@ -76,7 +76,7 @@ const Navbar = () => {
         <Toolbar>
           {isMatchlg ? (
             <>
-              <DrawerComp />
+              <DrawerCompBlack />
             </>
           ) : (
             <Grid container>
